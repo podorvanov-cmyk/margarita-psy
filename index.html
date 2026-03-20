@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Маргарита — психолог, коуч, наставник</title>
-  <meta name="description" content="Психолог, коуч и ментор Маргарита. Помогаю найти себя, выйти из кризиса и построить жизнь, которую хочется жить." />
+  <title>Маргарита — психолог, коуч, ментор</title>
+  <meta name="description" content="Психолог-практик Маргарита. КПТ, EMDR, гіпнотерапія за Еріксоном, гештальт, арт-терапія. Онлайн консультації." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --cream: #faf7f2;
       --warm: #f0e8dc;
@@ -19,385 +18,132 @@
       --muted: #7a6e67;
       --border: #e5ddd5;
     }
-
     html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.7; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    /* NAV */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(250,247,242,0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(250,247,242,0.95); backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
+      padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px;
     }
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      color: var(--rose-dark);
-      font-style: italic;
-    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--rose-dark); font-style: italic; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.875rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.875rem; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover { color: var(--rose); }
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 90vh;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-      align-items: center;
-      gap: 4rem;
-    }
-    .hero-text h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.8rem, 5vw, 4.5rem);
-      line-height: 1.15;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-    }
-    .hero-text h1 em {
-      font-style: italic;
-      color: var(--rose);
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 420px;
-      margin-bottom: 2.5rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: var(--rose);
-      color: white;
-      text-decoration: none;
-      border-radius: 2px;
-      font-size: 0.9rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      transition: background 0.2s, transform 0.1s;
-    }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 90vh; max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; align-items: center; gap: 4rem; }
+    .hero-text h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 1.15; font-weight: 400; margin-bottom: 1.5rem; }
+    .hero-text h1 em { font-style: italic; color: var(--rose); }
+    .hero-text p { font-size: 1.1rem; color: var(--muted); max-width: 420px; margin-bottom: 2.5rem; }
+    .btn { display: inline-block; padding: 1rem 2.5rem; background: var(--rose); color: white; text-decoration: none; border-radius: 2px; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; transition: background 0.2s, transform 0.1s; }
     .btn:hover { background: var(--rose-dark); transform: translateY(-1px); }
-    .hero-img {
-      position: relative;
-    }
-    .hero-img img {
-      width: 100%;
-      max-height: 600px;
-      object-fit: cover;
-      border-radius: 4px;
-      display: block;
-    }
-    .hero-img-placeholder {
-      width: 100%;
-      height: 520px;
-      background: var(--warm);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-    }
-    .hero-badge {
-      position: absolute;
-      bottom: -1.5rem; left: -1.5rem;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.2rem 1.5rem;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-    }
+    .hero-img { position: relative; }
+    .hero-img img { width: 100%; max-height: 600px; object-fit: cover; border-radius: 4px; display: block; }
+    .hero-badge { position: absolute; bottom: -1.5rem; left: -1.5rem; background: white; border: 1px solid var(--border); border-radius: 4px; padding: 1.2rem 1.5rem; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
     .hero-badge strong { display: block; font-size: 1.8rem; color: var(--rose); font-family: 'Cormorant Garamond', serif; }
     .hero-badge span { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
 
-    /* SECTION BASE */
     section { padding: 6rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
-    .section-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--rose);
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 2rem;
-    }
+    .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--rose); margin-bottom: 1rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; margin-bottom: 2rem; }
 
-    /* ABOUT */
     #about { background: white; }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 5rem;
-      align-items: start;
-    }
-    .about-img img {
-      width: 100%; border-radius: 4px;
-    }
-    .about-img-placeholder {
-      width: 100%; height: 400px;
-      background: var(--warm);
-      border-radius: 4px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--muted); font-size: 0.85rem;
-    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+    .about-img img { width: 100%; border-radius: 4px; }
     .about-text p { color: var(--muted); margin-bottom: 1.2rem; }
-    .credentials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 2rem;
-    }
-    .cred-tag {
-      background: var(--warm);
-      color: var(--rose-dark);
-      padding: 0.4rem 1rem;
-      border-radius: 2px;
-      font-size: 0.82rem;
-      letter-spacing: 0.03em;
-    }
+    .credentials { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+    .cred-tag { background: var(--warm); color: var(--rose-dark); padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.82rem; letter-spacing: 0.03em; }
 
-    /* HOW I WORK */
     #how { background: var(--cream); }
-    .methods-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .method-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2rem;
-      transition: box-shadow 0.2s;
-    }
+    .methods-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .method-card { background: white; border: 1px solid var(--border); border-radius: 4px; padding: 1.75rem; transition: box-shadow 0.2s; }
     .method-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
     .method-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .method-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      margin-bottom: 0.75rem;
-    }
-    .method-card p { color: var(--muted); font-size: 0.92rem; }
+    .method-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.75rem; }
+    .method-card p { color: var(--muted); font-size: 0.88rem; }
 
-    /* CASES */
-    #cases { background: white; }
-    .cases-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .case-card {
-      background: var(--cream);
-      border-left: 3px solid var(--rose);
-      padding: 2rem;
-      border-radius: 0 4px 4px 0;
-    }
-    .case-tag {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--rose);
-      margin-bottom: 0.75rem;
-    }
-    .case-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      margin-bottom: 0.75rem;
-    }
-    .case-card p { color: var(--muted); font-size: 0.9rem; }
+    #who { background: white; }
+    .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+    .who-card { background: var(--warm); border-radius: 4px; padding: 2rem; display: flex; gap: 1.2rem; align-items: flex-start; }
+    .who-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .who-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .who-card p { color: var(--muted); font-size: 0.88rem; }
 
-    /* TESTIMONIALS */
-    #testimonials { background: var(--warm); }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .testimonial {
-      background: white;
-      padding: 2rem;
-      border-radius: 4px;
-    }
-    .testimonial p {
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
-    }
-    .testimonial .author { font-size: 0.85rem; color: var(--rose-dark); font-weight: 500; }
-    .stars { color: var(--rose); margin-bottom: 1rem; font-size: 1.1rem; }
+    #gallery { background: var(--cream); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    .gallery-grid img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px; }
 
-    /* SERVICES */
-    #services { background: var(--cream); }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .service-card {
-      border: 1px solid var(--border);
-      background: white;
-      border-radius: 4px;
-      padding: 2rem;
-      text-align: center;
-    }
-    .service-card .price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.2rem;
-      color: var(--rose);
-    }
+    #services { background: white; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .service-card { border: 1px solid var(--border); background: var(--cream); border-radius: 4px; padding: 2rem; text-align: center; }
+    .service-card .price { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--rose); }
     .service-card .price-label { font-size: 0.8rem; color: var(--muted); }
-    .service-card h3 {
-      font-size: 1.1rem;
-      margin: 1rem 0 0.5rem;
-    }
+    .service-card h3 { font-size: 1.1rem; margin: 1rem 0 0.5rem; }
     .service-card p { color: var(--muted); font-size: 0.88rem; }
     .service-card .btn { margin-top: 1.5rem; }
 
-    /* BOOKING FORM */
-    #booking { background: white; }
-    .booking-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
+    #booking { background: var(--warm); }
+    .booking-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
     .booking-info p { color: var(--muted); margin-bottom: 1.5rem; }
-    .contact-items { margin-top: 2rem; }
-    .contact-item {
-      display: flex; align-items: center; gap: 1rem;
-      margin-bottom: 1rem;
-      color: var(--muted);
-    }
-    .contact-item span:first-child { font-size: 1.3rem; }
+    .contact-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: var(--muted); }
     form { display: flex; flex-direction: column; gap: 1rem; }
-    input, textarea, select {
-      width: 100%;
-      padding: 0.875rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      background: var(--cream);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      color: var(--text);
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    input:focus, textarea:focus, select:focus {
-      border-color: var(--rose);
-    }
+    input, textarea, select { width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--border); border-radius: 2px; background: white; font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text); outline: none; transition: border-color 0.2s; }
+    input:focus, textarea:focus, select:focus { border-color: var(--rose); }
     textarea { height: 120px; resize: vertical; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    button[type="submit"] {
-      padding: 1rem;
-      background: var(--rose);
-      color: white;
-      border: none;
-      border-radius: 2px;
-      font-size: 0.9rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
+    button[type="submit"] { padding: 1rem; background: var(--rose); color: white; border: none; border-radius: 2px; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
     button[type="submit"]:hover { background: var(--rose-dark); }
     .form-note { font-size: 0.8rem; color: var(--muted); text-align: center; }
 
-    /* FOOTER */
-    footer {
-      background: var(--text);
-      color: rgba(255,255,255,0.6);
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    footer .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      color: white;
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
+    footer { background: var(--text); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
+    footer .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: white; font-style: italic; margin-bottom: 1rem; }
     footer a { color: var(--rose); text-decoration: none; }
-    footer .footer-links {
-      display: flex; justify-content: center; gap: 2rem;
-      list-style: none;
-      margin: 1.5rem 0;
-    }
+    footer .footer-links { display: flex; justify-content: center; gap: 2rem; list-style: none; margin: 1.5rem 0; }
     footer .footer-links a { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
     footer .footer-links a:hover { color: var(--rose); }
 
-    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .methods-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 768px) {
       .hero { grid-template-columns: 1fr; }
       .hero-img { order: -1; }
       .hero-badge { display: none; }
       .about-grid, .booking-wrap { grid-template-columns: 1fr; gap: 2rem; }
-      .methods-grid, .testimonials-grid, .services-grid { grid-template-columns: 1fr; }
-      .cases-grid { grid-template-columns: 1fr; }
+      .who-grid, .services-grid, .gallery-grid { grid-template-columns: 1fr; }
+      .methods-grid { grid-template-columns: 1fr; }
       nav .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">Маргарита</div>
   <ul class="nav-links">
-    <li><a href="#about">Обо мне</a></li>
-    <li><a href="#how">Как работаю</a></li>
-    <li><a href="#cases">Кейсы</a></li>
-    <li><a href="#services">Услуги</a></li>
-    <li><a href="#booking">Запись</a></li>
+    <li><a href="#about">Про мене</a></li>
+    <li><a href="#how">Методи</a></li>
+    <li><a href="#who">Кому допоможу</a></li>
+    <li><a href="#services">Послуги</a></li>
+    <li><a href="#booking">Запис</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-text">
-    <p class="section-label">Психолог · Коуч · Ментор</p>
-    <h1>Пространство,<br>где можно быть <em>собой</em></h1>
-    <p>Помогаю людям выйти из тупика, справиться с тревогой и выстроить жизнь, которую хочется проживать — не переносить.</p>
-    <a href="#booking" class="btn">Записаться на консультацию</a>
+    <p class="section-label">Психолог · Коуч · Ментор · Наставник</p>
+    <h1>Перетвори кризу на <em>можливість</em> для зростання</h1>
+    <p>Уяви життя, де ти прокидаєшся з енергією, стосунки наповнені любов'ю, а минулі травми більше не керують твоїм життям.</p>
+    <a href="#booking" class="btn">Записатись на консультацію</a>
   </div>
   <div class="hero-img">
-    <!-- Replace src with real photo -->
-    <img src="img/margarita.jpg" alt="Маргарита — психолог" style="width:100%;max-height:600px;object-fit:cover;border-radius:4px;" />
+    <img src="img/margarita.jpg" alt="Маргарита — психолог" />
     <div class="hero-badge">
-      <strong>7+</strong>
-      <span>лет практики</span>
+      <strong>КПТ</strong>
+      <span>EMDR · Гіпнотерапія</span>
     </div>
   </div>
 </div>
@@ -407,103 +153,104 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-img">
-        <img src="img/margarita.jpg" alt="Маргарита" style="width:100%;border-radius:4px;" />
+        <img src="img/margarita2.jpg" alt="Маргарита" />
       </div>
       <div class="about-text">
-        <p class="section-label">Обо мне</p>
-        <h2 class="section-title">Маргарита — <em style="font-style:italic; color:var(--rose)">психолог и коуч</em></h2>
-        <p>Я помогаю взрослым людям разобраться в себе, найти выход из эмоционального тупика и построить отношения — с собой и с миром — на которых можно опереться.</p>
-        <p>В работе я использую научно обоснованные подходы: когнитивно-поведенческую терапию, схема-терапию и коучинговые инструменты. Это значит — конкретные инструменты, реальные изменения, измеримый результат.</p>
-        <p>Пришла в профессию через собственный опыт трансформации. Знаю изнутри, как это — застрять. И знаю, как выйти.</p>
+        <p class="section-label">Про мене</p>
+        <h2 class="section-title">Психолог-практик з <em style="font-style:italic;color:var(--rose)">сучасними методами</em></h2>
+        <p>Я практикуючий психолог з європейською освітою та сертифікатами. Моя робота — допомогти тобі вийти з кризи, впоратися з тривогою і побудувати стосунки з собою та іншими, на яких можна спертися.</p>
+        <p>Використовую доказові методи: КПТ, EMDR, гіпнотерапію за Еріксоном, гештальт та арт-терапію. Кожен клієнт отримує індивідуальний підхід — без шаблонів і кліше.</p>
+        <p>Зі мною ти отримаєш не просто підтримку, а конкретні інструменти, які працюють у реальному житті.</p>
         <div class="credentials">
-          <span class="cred-tag">🎓 Психологическое образование</span>
+          <span class="cred-tag">🎓 Європейська освіта</span>
           <span class="cred-tag">🧠 КПТ-терапевт</span>
-          <span class="cred-tag">🎯 Сертифицированный коуч</span>
-          <span class="cred-tag">🌱 Схема-терапия</span>
-          <span class="cred-tag">💼 7+ лет практики</span>
-          <span class="cred-tag">👥 500+ клиентов</span>
+          <span class="cred-tag">👁️ EMDR-спеціаліст</span>
+          <span class="cred-tag">🌀 Гіпнотерапія за Еріксоном</span>
+          <span class="cred-tag">🎨 Гештальт і арт-терапія</span>
+          <span class="cred-tag">✅ Сертифікати міжнародного рівня</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW I WORK -->
+<!-- HOW -->
 <section id="how">
   <div class="container">
-    <p class="section-label">Подход</p>
-    <h2 class="section-title">Как я работаю</h2>
+    <p class="section-label">Методи роботи</p>
+    <h2 class="section-title">Як я працюю</h2>
     <div class="methods-grid">
       <div class="method-card">
-        <div class="method-icon">🧠</div>
-        <h3>Когнитивно-поведенческая терапия</h3>
-        <p>Работаем с мыслями и убеждениями, которые мешают жить. Находим паттерны и меняем их на практике — без многолетнего анализа детства.</p>
-      </div>
-      <div class="method-card">
         <div class="method-icon">🎯</div>
-        <h3>Коучинг и целеполагание</h3>
-        <p>Помогаю найти ясность — чего вы на самом деле хотите. И составить план, который работает в реальной жизни, а не только на бумаге.</p>
+        <h3>КПТ</h3>
+        <p>Когнітивно-поведінкова терапія — для зміни деструктивних думок і поведінкових патернів. Дає конкретний результат.</p>
       </div>
       <div class="method-card">
-        <div class="method-icon">🌱</div>
-        <h3>Схема-терапия</h3>
-        <p>Для тех, кто ходит по одному и тому же кругу. Работаем с глубинными убеждениями о себе, сформированными в детстве.</p>
+        <div class="method-icon">👁️</div>
+        <h3>EMDR</h3>
+        <p>Десенсибілізація та переробка рухами очей — для опрацювання травм і ПТСР. Один з найефективніших методів на сьогодні.</p>
+      </div>
+      <div class="method-card">
+        <div class="method-icon">🌀</div>
+        <h3>Гіпнотерапія за Еріксоном</h3>
+        <p>М'який трансовий підхід для глибинних змін. Допомагає дістатися до кореня проблеми та змінити негативні установки.</p>
+      </div>
+      <div class="method-card">
+        <div class="method-icon">🎨</div>
+        <h3>Гештальт і арт-терапія</h3>
+        <p>Для самопізнання, роботи з почуттями та творчого вираження. Особливо ефективно при роботі з підлітками та дітьми.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CASES -->
-<section id="cases">
+<!-- WHO -->
+<section id="who">
   <div class="container">
-    <p class="section-label">Кейсы</p>
-    <h2 class="section-title">С чем приходят — и что меняется</h2>
-    <div class="cases-grid">
-      <div class="case-card">
-        <div class="case-tag">Тревога и выгорание</div>
-        <h3>«Я перестала чувствовать себя»</h3>
-        <p>Анна, 34 года. Пришла с ощущением пустоты и хронической усталостью. За 3 месяца восстановили границы, нашли источники энергии. Сейчас работает в удовольствие и успевает на себя.</p>
+    <p class="section-label">Кому допоможу</p>
+    <h2 class="section-title">Зі мною працюють</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">👥</div>
+        <div>
+          <h3>Сім'ї в кризі</h3>
+          <p>Конфлікти, відчуження, зрада, розлучення — допомагаю відновити зв'язок і побудувати міцні стосунки.</p>
+        </div>
       </div>
-      <div class="case-card">
-        <div class="case-tag">Отношения</div>
-        <h3>«Каждый раз одни и те же партнёры»</h3>
-        <p>Михаил, 29 лет. Повторяющиеся токсичные отношения. Разобрали схему привязанности, проработали детские сценарии. Через 4 месяца — первые здоровые отношения в жизни.</p>
+      <div class="who-card">
+        <div class="who-icon">👤</div>
+        <div>
+          <h3>Люди в депресії та тривозі</h3>
+          <p>Коли немає сил, немає радості, немає сенсу — разом знаходимо вихід і повертаємо смак до життя.</p>
+        </div>
       </div>
-      <div class="case-card">
-        <div class="case-tag">Самооценка</div>
-        <h3>«Я не верю, что заслуживаю большего»</h3>
-        <p>Екатерина, 41 год. Синдром самозванца мешал карьере. Работали с убеждениями и страхом успеха. Через 5 месяцев получила повышение и впервые его не саботировала.</p>
+      <div class="who-card">
+        <div class="who-icon">🧒</div>
+        <div>
+          <h3>Складні підлітки</h3>
+          <p>Бунт, замкненість, агресія, тривога — допомагаю налагодити взаєморозуміння між дітьми і батьками.</p>
+        </div>
       </div>
-      <div class="case-card">
-        <div class="case-tag">Переходный период</div>
-        <h3>«Не знаю, кто я теперь»</h3>
-        <p>Сергей, 38 лет. Развод и потеря работы одновременно. Помогли пройти кризис, переосмыслить ценности и выстроить новую идентичность. Сейчас — новый проект и новые отношения.</p>
+      <div class="who-card">
+        <div class="who-icon">🎖️</div>
+        <div>
+          <h3>Військові з ПТСР</h3>
+          <p>Психологічна реабілітація після бойового досвіду. Повернення до мирного життя з гідністю і опорою.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
+<!-- GALLERY -->
+<section id="gallery">
   <div class="container">
-    <p class="section-label">Отзывы</p>
-    <h2 class="section-title">Говорят клиенты</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>«Маргарита — редкий специалист. Не просто слушает, а помогает увидеть картину целиком. После первой же сессии я поняла, что наконец нашла того, кто мне нужен.»</p>
-        <div class="author">— Ольга, 36 лет</div>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>«Работали полгода. Пришёл с паническими атаками — ушёл с инструментами, которые работают в реальной жизни. Маргарита даёт не просто поддержку, а конкретные решения.»</p>
-        <div class="author">— Дмитрий, 31 год</div>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>«Благодаря работе с Маргаритой я наконец поняла, почему повторяю одни и те же ошибки. Теперь живу осознанно. Это звучит банально, но это правда меняет всё.»</p>
-        <div class="author">— Наталья, 44 года</div>
-      </div>
+    <p class="section-label">Фото</p>
+    <h2 class="section-title">Простір довіри</h2>
+    <div class="gallery-grid">
+      <img src="img/margarita.jpg" alt="Маргарита" />
+      <img src="img/margarita2.jpg" alt="Маргарита — психолог" />
+      <img src="img/margarita3.jpg" alt="Маргарита — коуч" />
     </div>
   </div>
 </section>
@@ -511,30 +258,30 @@
 <!-- SERVICES -->
 <section id="services">
   <div class="container">
-    <p class="section-label">Услуги</p>
-    <h2 class="section-title">Форматы работы</h2>
+    <p class="section-label">Послуги</p>
+    <h2 class="section-title">Формати роботи</h2>
     <div class="services-grid">
       <div class="service-card">
-        <div class="price">2 500 грн</div>
-        <div class="price-label">/ сессия (50 мин)</div>
-        <h3>Разовая консультация</h3>
-        <p>Для тех, кто хочет разобраться в конкретном вопросе или познакомиться с форматом работы.</p>
-        <a href="#booking" class="btn">Записаться</a>
+        <div class="price">1 500 грн</div>
+        <div class="price-label">/ сесія (50 хв)</div>
+        <h3>Індивідуальна консультація</h3>
+        <p>Для тих, хто хоче розібратися в конкретному питанні або познайомитися з форматом роботи.</p>
+        <a href="#booking" class="btn">Записатись</a>
       </div>
       <div class="service-card" style="border-color: var(--rose); position:relative; overflow:hidden;">
         <div style="position:absolute;top:1rem;right:1rem;background:var(--rose);color:white;font-size:0.7rem;padding:0.25rem 0.6rem;border-radius:2px;letter-spacing:0.05em;text-transform:uppercase;">Популярно</div>
-        <div class="price">18 000 грн</div>
-        <div class="price-label">/ 8 сессий (пакет)</div>
-        <h3>Курс работы</h3>
-        <p>Фокусированная работа над запросом. Конкретный результат за 2 месяца. Экономия 20%.</p>
-        <a href="#booking" class="btn">Записаться</a>
+        <div class="price">10 000 грн</div>
+        <div class="price-label">/ 8 сесій (пакет)</div>
+        <h3>Курс терапії</h3>
+        <p>Focused робота над запитом протягом 2 місяців. Конкретний результат. Економія 20%.</p>
+        <a href="#booking" class="btn">Записатись</a>
       </div>
       <div class="service-card">
-        <div class="price">5 000 грн</div>
-        <div class="price-label">/ 90 мин</div>
-        <h3>Коучинг-сессия</h3>
-        <p>Для тех, кто хочет разобраться с целями, выбором или профессиональным развитием.</p>
-        <a href="#booking" class="btn">Записаться</a>
+        <div class="price">2 500 грн</div>
+        <div class="price-label">/ 90 хв</div>
+        <h3>Сімейна консультація</h3>
+        <p>Для пар і сімей. Розбираємо конфлікти, відновлюємо діалог і будуємо нові стосунки.</p>
+        <a href="#booking" class="btn">Записатись</a>
       </div>
     </div>
   </div>
@@ -545,78 +292,77 @@
   <div class="container">
     <div class="booking-wrap">
       <div class="booking-info">
-        <p class="section-label">Запись</p>
-        <h2 class="section-title">Давайте познакомимся</h2>
-        <p>Первый шаг — самый сложный. Просто напишите — я отвечу в течение нескольких часов и мы выберем удобное время.</p>
-        <p>Работаю онлайн — с людьми из любого города и страны.</p>
-        <div class="contact-items">
+        <p class="section-label">Запис</p>
+        <h2 class="section-title">Зробіть перший крок</h2>
+        <p>Перший крок — найскладніший. Просто напишіть — я відповім протягом кількох годин і ми оберемо зручний час.</p>
+        <p>Працюю онлайн — з людьми з будь-якого міста і країни. 💻</p>
+        <div style="margin-top:2rem;">
           <div class="contact-item">
             <span>💬</span>
             <span>Telegram: <a href="https://t.me/Margaritavizavi" style="color:var(--rose);">@Margaritavizavi</a></span>
           </div>
           <div class="contact-item">
             <span>🕐</span>
-            <span>Отвечаю в рабочее время (10:00–20:00)</span>
+            <span>Відповідаю у робочий час (10:00–20:00)</span>
           </div>
           <div class="contact-item">
             <span>🌍</span>
-            <span>Онлайн-консультации по всему миру</span>
+            <span>Онлайн консультації по всьому світу</span>
           </div>
         </div>
       </div>
       <form id="contact-form" onsubmit="handleSubmit(event)">
         <div class="form-row">
-          <input type="text" placeholder="Ваше имя" required />
-          <input type="tel" placeholder="Телефон или Telegram" required />
+          <input type="text" placeholder="Ваше ім'я" required />
+          <input type="tel" placeholder="Телефон або Telegram" required />
         </div>
         <input type="email" placeholder="Email" />
         <select>
-          <option value="">Что вас беспокоит? (необязательно)</option>
-          <option>Тревога, страхи, панические атаки</option>
-          <option>Отношения и одиночество</option>
-          <option>Выгорание и потеря смысла</option>
-          <option>Самооценка и уверенность</option>
-          <option>Жизненный кризис, переходный период</option>
-          <option>Карьера и цели</option>
-          <option>Другое</option>
+          <option value="">З чим хочете звернутись? (необов'язково)</option>
+          <option>Тривога, страхи, панічні атаки</option>
+          <option>Стосунки та самотність</option>
+          <option>Депресія, вигорання</option>
+          <option>Травма, ПТСР</option>
+          <option>Сімейні конфлікти</option>
+          <option>Підлітки та діти</option>
+          <option>Особистісне зростання</option>
+          <option>Інше</option>
         </select>
-        <textarea placeholder="Расскажите немного о своей ситуации (необязательно)"></textarea>
-        <button type="submit">Отправить заявку</button>
-        <p class="form-note">🔒 Всё, что вы напишете — строго конфиденциально</p>
+        <textarea placeholder="Розкажіть трохи про свою ситуацію (необов'язково)"></textarea>
+        <button type="submit">Надіслати заявку</button>
+        <p class="form-note">🔒 Все, що ви напишете — суворо конфіденційно</p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Маргарита</div>
   <p>Психолог · Коуч · Ментор · Наставник</p>
   <ul class="footer-links">
-    <li><a href="#about">Обо мне</a></li>
-    <li><a href="#cases">Кейсы</a></li>
-    <li><a href="#services">Услуги</a></li>
-    <li><a href="#booking">Запись</a></li>
+    <li><a href="#about">Про мене</a></li>
+    <li><a href="#how">Методи</a></li>
+    <li><a href="#who">Кому допоможу</a></li>
+    <li><a href="#services">Послуги</a></li>
     <li><a href="https://t.me/Margaritavizavi">Telegram</a></li>
   </ul>
-  <p style="font-size:0.8rem;">© 2025 Маргарита. Все права защищены.</p>
+  <p style="font-size:0.8rem;">© 2025 Маргарита. Всі права захищені.</p>
 </footer>
 
 <script>
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = '✓ Заявка отправлена!';
+  btn.textContent = '✓ Заявку надіслано!';
   btn.style.background = '#6aab7a';
   btn.disabled = true;
   setTimeout(() => {
-    btn.textContent = 'Отправить заявку';
+    btn.textContent = 'Надіслати заявку';
     btn.style.background = '';
     btn.disabled = false;
     e.target.reset();
   }, 4000);
 }
 </script>
-
 </body>
 </html>
