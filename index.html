@@ -60,14 +60,15 @@
     .methods-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
     .method-card { background: white; border: 1px solid var(--border); border-radius: 4px; padding: 1.75rem; transition: box-shadow 0.2s; }
     .method-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
-    .method-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .method-icon { margin-bottom: 1rem; color: var(--rose); }
+    .who-icon { flex-shrink: 0; color: var(--rose-dark); margin-top: 0.2rem; }
     .method-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.75rem; }
     .method-card p { color: var(--muted); font-size: 0.88rem; }
 
     #who { background: white; }
     .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
     .who-card { background: var(--warm); border-radius: 4px; padding: 2rem; display: flex; gap: 1.2rem; align-items: flex-start; }
-    .who-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .contact-item svg { flex-shrink: 0; color: var(--rose); }
     .who-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
     .who-card p { color: var(--muted); font-size: 0.88rem; }
 
@@ -166,19 +167,19 @@
       <div class="about-text">
         <p class="section-label">Про мене</p>
         <h2 class="section-title">Магістр психології, <em style="font-style:italic;color:var(--rose)">психотерапевт-практик</em></h2>
-        <p>Я вмію зцілювати, я вмію відроджувати, я вмію зупинити страждання — <strong>я навчу жити без болю.</strong></p>
+        <p>Я вмію зцілювати, відроджувати, зупиняти страждання. <strong>Я навчу жити без болю.</strong></p>
         <p>Кваліфікація у КПТ, EMDR, гіпнотерапії, транзакційному аналізі та гештальт-терапії з нарахуванням годин і кредитів у Вроцлавському університеті та інших навчальних закладах. Сертифікати та дипломи ЮНІСЕФ, провідних європейських та українських університетів. Член МПАПМ України.</p>
         <p>Працюю онлайн і офлайн двома мовами. Підбір методу та технік — індивідуально для кожного. Відгуки справжні — сама собі не пишу 😊</p>
         <div class="credentials">
-          <span class="cred-tag">🎓 Магістр психології</span>
-          <span class="cred-tag">🧠 КПТ</span>
-          <span class="cred-tag">👁️ EMDR</span>
-          <span class="cred-tag">🌀 Гіпнотерапія за Еріксоном</span>
-          <span class="cred-tag">🔄 Транзакційний аналіз</span>
-          <span class="cred-tag">🎨 Гештальт і арт-терапія</span>
-          <span class="cred-tag">🏛️ Вроцлавський університет</span>
-          <span class="cred-tag">🌍 Сертифікати ЮНІСЕФ</span>
-          <span class="cred-tag">✅ Член МПАПМ України</span>
+          <span class="cred-tag">Магістр психології</span>
+          <span class="cred-tag">КПТ</span>
+          <span class="cred-tag">EMDR</span>
+          <span class="cred-tag">Гіпнотерапія за Еріксоном</span>
+          <span class="cred-tag">Транзакційний аналіз</span>
+          <span class="cred-tag">Гештальт і арт-терапія</span>
+          <span class="cred-tag">Вроцлавський університет</span>
+          <span class="cred-tag">Сертифікати ЮНІСЕФ</span>
+          <span class="cred-tag">Член МПАПМ України</span>
         </div>
       </div>
     </div>
@@ -192,22 +193,30 @@
     <h2 class="section-title">Як я працюю</h2>
     <div class="methods-grid">
       <div class="method-card">
-        <div class="method-icon">🎯</div>
+        <div class="method-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
         <h3>КПТ</h3>
-        <p>Когнітивно-поведінкова терапія — для зміни деструктивних думок і поведінкових патернів. Дає конкретний результат.</p>
+        <p>Когнітивно-поведінкова терапія для зміни деструктивних думок і поведінкових патернів. Дає конкретний результат.</p>
       </div>
       <div class="method-card">
-        <div class="method-icon">👁️</div>
+        <div class="method-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="5"/><path d="M12 7v10M7 9.5c0 0 2.5 2.5 5 2.5s5-2.5 5-2.5"/></svg>
+        </div>
         <h3>EMDR</h3>
-        <p>Десенсибілізація та переробка рухами очей — для опрацювання травм і ПТСР. Один з найефективніших методів на сьогодні.</p>
+        <p>Десенсибілізація та переробка рухами очей для опрацювання травм і ПТСР. Один з найефективніших методів у світі.</p>
       </div>
       <div class="method-card">
-        <div class="method-icon">🌀</div>
+        <div class="method-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6a6 6 0 1 0 6 6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
         <h3>Гіпнотерапія за Еріксоном</h3>
         <p>М'який трансовий підхід для глибинних змін. Допомагає дістатися до кореня проблеми та змінити негативні установки.</p>
       </div>
       <div class="method-card">
-        <div class="method-icon">🎨</div>
+        <div class="method-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
         <h3>Гештальт і арт-терапія</h3>
         <p>Для самопізнання, роботи з почуттями та творчого вираження. Особливо ефективно при роботі з підлітками та дітьми.</p>
       </div>
@@ -222,45 +231,57 @@
     <h2 class="section-title">Зі мною працюють</h2>
     <div class="who-grid">
       <div class="who-card">
-        <div class="who-icon">💔</div>
+        <div class="who-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
         <div>
           <h3>Кризи у стосунках</h3>
-          <p>Конфлікти, відчуження, зрада, розлучення, труднощі у парі та з дітьми — великий досвід роботи з парами та сім'ями.</p>
+          <p>Конфлікти, відчуження, зрада, розлучення, труднощі у парі та з дітьми. Великий досвід роботи з парами та сім'ями.</p>
         </div>
       </div>
       <div class="who-card">
-        <div class="who-icon">🌀</div>
+        <div class="who-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
         <div>
           <h3>Тривога, ПТСР, ОКР</h3>
-          <p>Тривожні розлади, панічні атаки, безсоння, травматичні події, ПТСР — знаходимо вихід разом.</p>
+          <p>Тривожні розлади, панічні атаки, безсоння, травматичні події, ПТСР. Знаходимо вихід разом.</p>
         </div>
       </div>
       <div class="who-card">
-        <div class="who-icon">😔</div>
+        <div class="who-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
         <div>
           <h3>Депресія та вигорання</h3>
-          <p>Коли нічого не радує, немає сенсу, губиться себе — повертаємо смисл і наповнюємо життя позитивними емоціями.</p>
+          <p>Коли нічого не радує і губиться себе. Повертаємо смисл і наповнюємо життя позитивними емоціями.</p>
         </div>
       </div>
       <div class="who-card">
-        <div class="who-icon">🎖️</div>
+        <div class="who-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
         <div>
           <h3>Військові з ПТСР</h3>
           <p>Психологічна реабілітація після бойового досвіду. Повернення до мирного життя з гідністю і опорою.</p>
         </div>
       </div>
       <div class="who-card">
-        <div class="who-icon">🧒</div>
+        <div class="who-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
         <div>
           <h3>Діти та підлітки</h3>
-          <p>Складнощі у вихованні, бунт, замкненість — допомагаю налагодити взаєморозуміння між дітьми і батьками.</p>
+          <p>Складнощі у вихованні, бунт, замкненість. Допомагаю налагодити взаєморозуміння між дітьми і батьками.</p>
         </div>
       </div>
       <div class="who-card">
-        <div class="who-icon">🔓</div>
+        <div class="who-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
         <div>
           <h3>Залежності та глухий кут</h3>
-          <p>Труднощі з грошима, робота, залежності — у будь-якій ситуації, де ви не можете знайти вихід.</p>
+          <p>Труднощі з роботою, залежності, ситуація без виходу. У будь-якій ситуації знаходимо точку опори.</p>
         </div>
       </div>
     </div>
@@ -336,20 +357,20 @@
         <p>Працюю онлайн — з людьми з будь-якого міста і країни. 💻</p>
         <div style="margin-top:2rem;">
           <div class="contact-item">
-            <span>💬</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             <span>Telegram: <a href="https://t.me/Margaritavizavi" style="color:var(--rose);">@Margaritavizavi</a></span>
           </div>
           <div class="contact-item">
-            <span>📱</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.49 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
             <span>Viber / WhatsApp — телефон відкритий</span>
           </div>
           <div class="contact-item">
-            <span>🌍</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <span>Онлайн і офлайн, двома мовами</span>
           </div>
           <div class="contact-item">
-            <span>🔒</span>
-            <span>Повна конфіденційність — завжди на зв'язку</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Повна конфіденційність, завжди на зв'язку</span>
           </div>
         </div>
       </div>
@@ -372,7 +393,7 @@
         </select>
         <textarea placeholder="Розкажіть трохи про свою ситуацію (необов'язково)"></textarea>
         <button type="submit">Надіслати заявку</button>
-        <p class="form-note">🔒 Все, що ви напишете — суворо конфіденційно</p>
+        <p class="form-note">Все, що ви напишете — суворо конфіденційно</p>
       </form>
     </div>
   </div>
