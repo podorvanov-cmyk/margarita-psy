@@ -75,7 +75,14 @@
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
     .gallery-grid img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px; }
 
-    #services { background: white; }
+    #reviews { background: white; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .review-img-card { border-radius: 6px; overflow: hidden; border: 1px solid var(--border); transition: box-shadow 0.2s; cursor: pointer; }
+    .review-img-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+    .review-img-card img { width: 100%; display: block; object-fit: contain; background: var(--warm); max-height: 420px; }
+    @media (max-width: 768px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+    #services { background: var(--cream); }
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
     .service-card { border: 1px solid var(--border); background: var(--cream); border-radius: 4px; padding: 2rem; text-align: center; }
     .service-card .price { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--rose); }
@@ -126,6 +133,7 @@
     <li><a href="#about">Про мене</a></li>
     <li><a href="#how">Методи</a></li>
     <li><a href="#who">Кому допоможу</a></li>
+    <li><a href="#reviews">Відгуки</a></li>
     <li><a href="#services">Послуги</a></li>
     <li><a href="#booking">Запис</a></li>
   </ul>
@@ -268,6 +276,19 @@
       <img src="img/margarita.jpg" alt="Маргарита" />
       <img src="img/margarita2.jpg" alt="Маргарита — психолог" />
       <img src="img/margarita3.jpg" alt="Маргарита — коуч" />
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <p class="section-label">Відгуки</p>
+    <h2 class="section-title">Що кажуть клієнти</h2>
+    <div class="reviews-grid">
+      <div class="review-img-card">
+        <img src="img/review1.jpg" alt="Відгук клієнтки — Маргарита психолог" />
+      </div>
     </div>
   </div>
 </section>
